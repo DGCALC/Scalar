@@ -12,10 +12,13 @@
 #include <cmath> // std::sqrt, std::abs, std::sin, std::cos, std::exp, std::log
 
 struct float754: MachineType<float> {
-    template <typename PP, typename T, size_t size, size_t cosize, size_t prosize>
+    template <typename PP_, typename T, size_t size, size_t cosize, size_t prosize>
     friend class Super;
 
-    using T = float754;
+   using T = float754;
+   using PP = float754;
+   using Scalar = float754;
+   using Under = float;
 
 public: // constants:
 

@@ -20,10 +20,13 @@
 #include <cstdio> // ????
 
 struct double754: MachineType<double> {
-    template <typename PP, typename T, size_t size, size_t cosize, size_t prosize>
+    template <typename PP_, typename T, size_t size, size_t cosize, size_t prosize>
     friend class Super;
 
     using T = double754;
+    using PP = double754;
+    using Scalar = double754;
+    using Under = double;
 
 public: // static fields:
 
